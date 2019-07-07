@@ -17,6 +17,39 @@ code {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.ant-btn-primary {
+  background-color: orange !important;
+  border: orange !important;
+}
+.ant-typography a{
+  color: orange !important;
+}
+
+.ant-divider-horizontal{
+  background-color: orange !important;
+}
+
+.asmaaquiz-title{
+  color: orange !important;
+}
+
+.ant-table-body th{
+  background: orange !important;
+}
+.ant-table-header-column{
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.ant-pagination-item-active{
+  border-color: orange !important;
+  color: orange !important;
+}
+ .ant-pagination-item-active a{
+  color: orange !important;
+
+}
 /*
 #root{
   height: 100%;

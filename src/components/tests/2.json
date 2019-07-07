@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Do you work on Saturdays?",
+    "answer": "1",
+    "options": [
+      { "value": 0, "label": "Yes, I work" },
+      { "value": 1, "label": "Yes, I do" },
+      { "value": 2, "label": "Yes, I am" }
+    ]
+  },
+  {
+    "id": 2,
+    "question": " Do you have a brother?",
+    "answer": "2",
+    "options": [
+      { "value": 0, "label": "No, I not have" },
+      { "value": 1, "label": "No, they don't" },
+      { "value": 2, "label": "No, I don't" }
+    ]
+  },
+  {
+    "id": 3,
+    "question": "How old are you? ",
+    "answer": "1",
+    "options": [
+      { "value": 0, "label": "No, I'm not" },
+      { "value": 1, "label": "I'm 35" },
+      { "value": 2, "label": "I'm a waiter" }
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Where are they from? ",
+    "answer": "1",
+    "options": [
+      { "value": 0, "label": "There from Bath" },
+      { "value": 1, "label": "They're from Bath" },
+      { "value": 2, "label": "I'm from Bath" }
+    ]
+  },
+  {
+    "id": 5,
+    "question": "....... you like modern art?",
+    "answer": "0",
+    "options": [
+      { "value": 0, "label": "Do" },
+      { "value": 1, "label": "It" },
+      { "value": 2, "label": "Are" }
+    ]
+  }
+]

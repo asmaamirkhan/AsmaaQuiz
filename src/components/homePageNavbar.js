@@ -9,12 +9,6 @@ import 'antd/dist/antd.css';
 const { Header } = Layout;
 
 class NavBar extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = {
-      color: 'none'
-    }
-  }
 
   render() {
     return (
@@ -25,7 +19,7 @@ class NavBar extends Component {
             theme="dark"
             mode="horizontal"
             style={{ lineHeight: '64px', float: 'right', position:'sticky' }}
-            visible={this.state.logged}
+            visible={true}
           >
           <Menu.Item>
               <span>About</span>

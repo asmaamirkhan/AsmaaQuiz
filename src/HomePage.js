@@ -4,19 +4,17 @@
 import React, { Component } from 'react';
 
 import {
-  FaGraduationCap, FaClipboardList
+  FaClipboardList
 } from "react-icons/fa";
 
 import 'antd/dist/antd.css';
 import './index.css'
 import Navbar from './components/homePageNavbar';
-
-import { Layout, Menu, Breadcrumb, Icon, Typography, Button, Divider } from 'antd';
+import TestTable from './components/TestTable';
+import { Layout, Typography, Button, Divider } from 'antd';
 
 const { Title, Text } = Typography;
-const { SubMenu } = Menu;
 const { Header, Content, Footer } = Layout;
-
 class HomePage extends Component {
   render() {
     return (
@@ -34,9 +32,9 @@ class HomePage extends Component {
                 position: 'absolute', display: 'flex', textAlign: 'center', height: '100%'
               }}>
                 <Title level={1} style={{ color: 'white', fontSize: '50px', margin: '0 10%' }}>
-                  AsmaaQuiz the solution to keep your knowledge up-to-date!  
+                  AsmaaQuiz the solution to keep your knowledge up-to-date!
                   <Divider type="horizontal" style={{ height: 3 }} />
-                  </Title>
+                </Title>
 
 
                 <Text style={{ color: 'white', fontSize: 20 }}>
@@ -46,14 +44,22 @@ class HomePage extends Component {
                   In another hand it is easy-to-use and open source!
               </Text>
                 <div style={{ margin: 10 }}>
-                  <Button type="primary" shape="round" size={'large'} onClick={this.onStudentClick}>
+                  <Button type="primary" shape="round" size={'large'} href="#quizes">
                     <FaClipboardList size='25' /> <b>Start your first quiz!</b>
-                </Button>
+                  </Button>
                 </div>
               </div>
             </div>
           </Layout>
-          Add elements
+
+          <Content style={{ padding: '50px 50px', background: '#fff5e8' }} id="quizes">
+            <Title style={{ textAlign: 'center' }} className='asmaaquiz-title'>
+              Available Quizes
+            </Title>
+
+            <TestTable />
+          </Content>
+
         </Content>
         <Footer style={{ textAlign: 'center' }}>Made with love by Asmaa</Footer>
       </Layout>
