@@ -3,7 +3,7 @@
 */
 import React, { Component } from 'react';
 
-import { Layout, Typography, Radio } from 'antd';
+import { Layout, Typography, Radio, Button, Alert } from 'antd';
 import 'antd/dist/antd.css';
 
 const { Content } = Layout;
@@ -13,18 +13,16 @@ class Quiz extends Component {
     super(props, context);
     this.state = {
       quiz: [],
-      v: []
+      v: [],
+      result: 0,
+      showAlert: false
     };
     this.handleAnswer = this.handleAnswer.bind(this);
   }
 
   componentWillMount() {
     var quizz = require('./tests/' + this.props.code + '.json');
-
-    this.setState({ quiz: quizz, v: new Array(quizz.length).fill("") }, () => {
-      console.log(this.state)
-    })
-
+    this.setState({ quiz: quizz, v: new Array(quizz.length).fill("") });
   }
 
   handleAnswer(e, i) {
@@ -34,11 +32,19 @@ class Quiz extends Component {
     this.setState({
       v: items
     });
-    console.log(items)
-
   }
+
+  handleCheck = () => {
+    let result = 0;
+    this.state.v.forEach((item, i) => {
+      if (item == this.state.quiz[i].answer) {
+        result++;
+      }
+    })
+    this.setState({ showAlert: true, result: result });
+  }
+
   render() {
-    console.log(this.state)
     return (
       <div>
         {
@@ -61,10 +67,19 @@ class Quiz extends Component {
                   value={this.state.v[key]}
                   onChange={e => this.handleAnswer(e, key)}
                 />
+
               </Content>
             )
           })
         }
+        <Button type="primary" onClick={this.handleCheck}>Check Answers!</Button>
+        <Alert
+          style={{ margin: "30px 0px", display: this.state.showAlert ? "block" : "none" }}
+          message="Your note is:"
+          description={(this.state.result) + " / " + (this.state.quiz).length}
+          type="warning"
+          showIcon
+        />
       </div>
     );
   }

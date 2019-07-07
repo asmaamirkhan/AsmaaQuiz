@@ -42,13 +42,25 @@ code {
   font-weight: bold !important;
 }
 
+.ant-table-thead th{
+  background-color: orange !important;
+}
+
 .ant-pagination-item-active{
   border-color: orange !important;
   color: orange !important;
 }
  .ant-pagination-item-active a{
   color: orange !important;
+}
 
+
+.ant-radio-checked .ant-radio-inner{
+  border-color: orange !important;
+}
+
+.ant-radio-inner::after {
+  background-color: orange !important;
 }
 /*
 #root{

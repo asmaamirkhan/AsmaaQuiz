@@ -5,15 +5,14 @@ import React, { Component } from 'react';
 import Quiz from './components/Quiz';
 import NavBar from './components/homePageNavbar';
 
-import { Layout, Typography } from 'antd';
+import { Layout } from 'antd';
 
 const { Header, Content, Footer } = Layout;
 
 class QuizPage extends Component {
 
   render() {
-    let params = new URLSearchParams( window.location.search);
-    console.log(params.get('code'))
+    let params = new URLSearchParams(window.location.search);
     return (
       <Layout>
         <Header className="header">

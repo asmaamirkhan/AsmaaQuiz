@@ -28,7 +28,7 @@ class HomePage extends Component {
 
             <div id="home-page" style={{ height: '90vh', position: 'relative' }}>
               <div style={{
-                background: 'rgba(92, 77, 66, 0.8)', width: '100%', 'flex-direction': 'column', justifyContent: 'center',
+                background: 'rgba(92, 77, 66, 0.8)', width: '100%', flexDirection: 'column', justifyContent: 'center',
                 position: 'absolute', display: 'flex', textAlign: 'center', height: '100%'
               }}>
                 <Title level={1} style={{ color: 'white', fontSize: '50px', margin: '0 10%' }}>
