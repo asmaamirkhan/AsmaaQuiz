@@ -21,7 +21,7 @@ class Quiz extends Component {
   componentWillMount() {
     var quizz = require('./tests/' + this.props.code + '.json');
 
-    this.setState({ quiz: quizz, v: new Array(quizz.length).fill(0) }, () => {
+    this.setState({ quiz: quizz, v: new Array(quizz.length).fill("") }, () => {
       console.log(this.state)
     })
 
@@ -46,7 +46,7 @@ class Quiz extends Component {
             return (
               <Content
                 style={{
-                  margin: '24px 16px',
+                  margin: '24px 0',
                   padding: 24,
                   background: '#fff',
                   height: 'auto',

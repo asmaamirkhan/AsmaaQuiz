@@ -25,7 +25,7 @@ class TestTable extends Component {
         console.log(this.state)
         return (
             <div>
-                <Table bordered dataSource={this.state.tests} style={{ background: 'white' }} rowKey="id">
+                <Table bordered scroll={{y:240}} dataSource={this.state.tests} style={{ background: 'white' }} rowKey="id">
 
                     <Column title="#" dataIndex="id" />
                     <Column title="Test Title" dataIndex="name" key="address" />

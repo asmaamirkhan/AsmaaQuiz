@@ -20,7 +20,7 @@ class QuizPage extends Component {
           <div className="logo" />
           <NavBar />
         </Header>
-        <Content style={{ margin: "20px 80px", background: "#f0f2f5" }}>
+        <Content style={{ margin: "20px 10%", background: "#f0f2f5" }}>
           <Quiz code={params.get('code')} />
         </Content>
         <Footer style={{ textAlign: 'center' }}>Made with love by Asmaa</Footer>
